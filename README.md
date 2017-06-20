@@ -1,7 +1,42 @@
 # ParfA
 Relying on a basic I/O scheme and lexicon that can be understood by the average English speaker, ParfA's goal is to be the programming language that even your grandpa can pick up in a few minutes.
 
-## White Space
+## Simplifying Java
+
+Take a look at this area calculation program in Java:
+````
+package com.github;
+
+import java.util.Scanner;
+
+public class CalculateArea
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Length: ");
+        double length = scan.nextDouble();
+        System.out.println("Width: ");
+        double width = scan.nextDouble();
+        System.out.println("Area: " + length * width);
+    }
+}
+````
+Now take a look at this same program in ParfA.
+````
+start
+{
+    ask("Length: ")
+    number length = answer
+    ask("Width: ")
+    number width = answer
+    announce("Area: " + length * width)
+}
+````
+
+## Syntax
+
+### White Space
 ````
 ;
 \t 
@@ -9,7 +44,7 @@ Relying on a basic I/O scheme and lexicon that can be understood by the average 
 
 Semicolons, tabs, and, of course, blank spaces, are not recognized by the compiler. To distinguish between statements, press enter or return, depending on whether the computer is running Windows OS or Mac OS respectively
 
-## Keywords
+### Keywords
 ````
 if(condition) {} //Executes the block of code if condition is true
 wait(num) //Waits num seconds
@@ -17,18 +52,18 @@ waitUntil(condition) //Waits until the condition is true before moving on to the
 repeatUntil(condition) {} //Repeats the block of code until condition is true
 loop(num) {} //Loops through block of code num times
 forever {} //Loops through block of code until program stops running
-announce (statement) //Prints statement to screen
-ask (statement) //Prints statement to screen and requests user input
+announce(statement) //Prints statement to screen
+ask(statement) //Prints statement to screen and requests user input
 answer //Whatever the user typed in
 ````
 
-## Separators
+### Separators
 ````
 () //Parentheses
 {} //Brackets for holding together several statements of code
 ````
 
-## Operators
+### Operators
 ````
 +, -, *, / //Arithmetic operators, order of operations applies
 % //Modulus, gives you the remainder after dividing the first number by the second number
@@ -38,4 +73,11 @@ not, ! //Used to negate a boolean statement, returning the opposite of the boole
 equals, == //Used to check equality between two elements, evaluates to true if the data is equal
 doesnotequal, != //Used to check inequality between two elements, evaluates to true if the data is not equal
 store, = //Used to store the value on the right in the variable on the left
+````
+
+### Literals
+````
+number //Used for numerical data
+logic //Used for boolean (true/false) data
+string //Used for textual data
 ````
