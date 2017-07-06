@@ -1,0 +1,5 @@
+ask "What is the length?"
+create number length store answer
+ask "What is the width?"
+create number width store answer
+announce length * width
