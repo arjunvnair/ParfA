@@ -21,7 +21,7 @@ public interface ParfATreeConstants
   public int JJTCONTAINS = 17;
   public int JJTNUMBERLITERAL = 18;
   public int JJTLOGICLITERAL = 19;
-  public int JJTSTRINGLITERAL = 20;
+  public int JJTTEXTLITERAL = 20;
   public int JJTLISTLITERAL = 21;
   public int JJTID = 22;
   public int JJTANSWER = 23;
@@ -62,7 +62,7 @@ public interface ParfATreeConstants
     "Contains",
     "NumberLiteral",
     "LogicLiteral",
-    "StringLiteral",
+    "TextLiteral",
     "ListLiteral",
     "Id",
     "Answer",
@@ -82,4 +82,4 @@ public interface ParfATreeConstants
     "Block",
   };
 }
-/* JavaCC - OriginalChecksum=6ad4964234cdc07cda27752060c90e75 (do not edit this line) */
+/* JavaCC - OriginalChecksum=61fa80cf982ce0be46923a0b7055f32b (do not edit this line) */

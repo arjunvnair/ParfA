@@ -38,7 +38,7 @@ public class ASTVariableDeclareAssignStatement extends SimpleNode
 		{
 			c = Boolean.class;
 		}
-		else if(type == ParfAConstants.STRING)
+		else if(type == ParfAConstants.TEXT)
 		{
 			c = String.class;
 			val = val.toString();

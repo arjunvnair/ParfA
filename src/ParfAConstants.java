@@ -45,7 +45,7 @@ public interface ParfAConstants {
   /** RegularExpression Id. */
   int LOGIC = 23;
   /** RegularExpression Id. */
-  int STRING = 24;
+  int TEXT = 24;
   /** RegularExpression Id. */
   int LIST = 25;
   /** RegularExpression Id. */
@@ -103,7 +103,7 @@ public interface ParfAConstants {
   /** RegularExpression Id. */
   int FALSE = 52;
   /** RegularExpression Id. */
-  int STRING_EXPRESSION = 53;
+  int TEXT_EXPRESSION = 53;
   /** RegularExpression Id. */
   int IDENTIFIER = 54;
   /** RegularExpression Id. */
@@ -142,7 +142,7 @@ public interface ParfAConstants {
     "\"create\"",
     "\"number\"",
     "\"logic\"",
-    "\"string\"",
+    "\"text\"",
     "\"list\"",
     "\"(\"",
     "\")\"",
@@ -171,7 +171,7 @@ public interface ParfAConstants {
     "<NUMBER_EXPRESSION>",
     "\"true\"",
     "\"false\"",
-    "<STRING_EXPRESSION>",
+    "<TEXT_EXPRESSION>",
     "<IDENTIFIER>",
     "\"/*\"",
     "<SINGLE_LINE_COMMENT>",

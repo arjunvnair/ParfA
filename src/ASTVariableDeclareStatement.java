@@ -22,7 +22,7 @@ public class ASTVariableDeclareStatement extends SimpleNode
 			ParfANode.variables.put(name, new Double(0));
 		else if(type == ParfAConstants.LOGIC)
 			ParfANode.variables.put(name, new Boolean(false));
-		else if(type == ParfAConstants.STRING)
+		else if(type == ParfAConstants.TEXT)
 		    ParfANode.variables.put(name, new String(""));
 		else if(type == ParfAConstants.LIST)
 			ParfANode.variables.put(name, new ArrayList<Object>());
