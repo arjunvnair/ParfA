@@ -14,24 +14,21 @@ public class CalculateArea
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Length: ");
+        System.out.println("What is the length? ");
         double length = scan.nextDouble();
-        System.out.println("Width: ");
+        System.out.println("What is the width? ");
         double width = scan.nextDouble();
-        System.out.println("Area: " + length * width);
+        System.out.println(length * width);
     }
 }
 ````
 Now take a look at this same program in ParfA.
 ````
-start
-{
-    ask("Length: ")
-    number length = answer
-    ask("Width: ")
-    number width = answer
-    announce("Area: " + length * width)
-}
+ask "What is the length?"
+create number length store answer
+ask "What is the width?"
+create number width store answer
+announce length * width
 ````
 
 ## Syntax
