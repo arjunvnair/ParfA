@@ -21,7 +21,8 @@ public class ASTLoopStatement extends SimpleNode
 		}
 		catch(ClassCastException e)
 		{
-			throw new IllegalStateException();
+		    System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", loop time must be a numeric expression.");
+		    throw new IllegalStateException();
 		}
 	}
 }

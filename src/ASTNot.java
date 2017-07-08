@@ -17,9 +17,10 @@ public class ASTNot extends SimpleNode
 	    {
 	    	ParfANode.stack[ParfANode.p] = new Boolean(!((Boolean) ParfANode.stack[ParfANode.p]).booleanValue());
 	    }
-	    catch(IllegalStateException e)
+	    catch(ClassCastException e)
 	    {
-	    	e.printStackTrace();
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", can only use the not operator on a logic expression.");
+	    	throw new IllegalStateException();
 	    }
 	}
 }

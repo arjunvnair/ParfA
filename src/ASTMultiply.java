@@ -20,6 +20,7 @@ public class ASTMultiply extends SimpleNode
 	    }
 	    catch(ClassCastException e)
 	    {
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot multiply " + getName(ParfANode.stack[ParfANode.p + 1].getClass()) + " with " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".");
 	    	throw new IllegalStateException();
 	    }
 	}

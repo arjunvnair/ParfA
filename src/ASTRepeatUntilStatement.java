@@ -25,6 +25,7 @@ public class ASTRepeatUntilStatement extends SimpleNode
 		}
 		catch(ClassCastException e)
 		{
+			System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", repeat until condition must be a logical expression.");
 			throw new IllegalStateException();
 		}
 	}

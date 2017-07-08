@@ -17,13 +17,15 @@ public class ASTWaitStatement extends SimpleNode
 			jjtGetChild(0).interpret();
 			Thread.sleep(1000 * (int) ((Double) ParfANode.stack[ParfANode.p--]).doubleValue());
 		}
-		catch(ClassCastException e)
-		{
-			throw new IllegalStateException();
-		}
+    	catch(ClassCastException e)
+    	{
+    		System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", wait time must be a numeric expression.");
+    		throw new IllegalStateException();
+    	}
 		catch(InterruptedException e)
 		{
-			throw new IllegalStateException();
+			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
+    		throw new IllegalStateException();
 		}
 	}
 }

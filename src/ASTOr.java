@@ -13,13 +13,21 @@ public class ASTOr extends SimpleNode
 	@Override
 	public void interpret() 
 	{
-		jjtGetChild(0).interpret();
-		if (((Boolean) ParfANode.stack[ParfANode.p]).booleanValue()) 
+		try
 		{
-			ParfANode.stack[ParfANode.p] = new Boolean(true);
-			return;
+			jjtGetChild(0).interpret();
+			if (((Boolean) ParfANode.stack[ParfANode.p]).booleanValue()) 
+			{
+				ParfANode.stack[ParfANode.p] = new Boolean(true);
+				return;
+			}
+			jjtGetChild(1).interpret();
+			ParfANode.stack[--ParfANode.p] = new Boolean(((Boolean) ParfANode.stack[ParfANode.p]).booleanValue() || ((Boolean) ParfANode.stack[ParfANode.p + 1]).booleanValue());
 		}
-		jjtGetChild(1).interpret();
-		ParfANode.stack[--ParfANode.p] = new Boolean(((Boolean) ParfANode.stack[ParfANode.p]).booleanValue() || ((Boolean) ParfANode.stack[ParfANode.p + 1]).booleanValue());
+		catch(ClassCastException e)
+		{
+			System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot use or operator with non-logic values.");
+	    	throw new IllegalStateException();
+		}
   }
 }

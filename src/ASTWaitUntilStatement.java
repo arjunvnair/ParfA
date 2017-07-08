@@ -21,9 +21,10 @@ public class ASTWaitUntilStatement extends SimpleNode
 			}
 			while(!((Boolean) ParfANode.stack[ParfANode.p--]).booleanValue());
 		}
-		catch(ClassCastException e)
-		{
-			throw new IllegalStateException();
-		}
+	    catch(ClassCastException e)
+	    {
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", wait condition must be a logic expression.");
+	    	throw new IllegalStateException();
+	    }
 	}
 }

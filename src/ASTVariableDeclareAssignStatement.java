@@ -31,26 +31,28 @@ public class ASTVariableDeclareAssignStatement extends SimpleNode
 				}
 				catch(NumberFormatException e)
 				{
-					throw new IllegalStateException();
+					val = new Double(0.0);
 				}
 		}
 		else if(type == ParfAConstants.LOGIC)
-		{
 			c = Boolean.class;
-		}
 		else if(type == ParfAConstants.TEXT)
 		{
 			c = String.class;
 			val = val.toString();
 		}
 		else if(type == ParfAConstants.LIST)
-		{
 			c = ArrayList.class;
-		}
 		else
+		{
+			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
 			throw new IllegalStateException();
+		}
 		if(!(val.getClass().equals(c)))
+		{
+			System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + name + " is a " + getName(c) + " and cannot store a " + getName(val.getClass()) + ".");
 			throw new IllegalStateException();
+		}
     	ParfANode.variables.put(name, val);
 	}
 }

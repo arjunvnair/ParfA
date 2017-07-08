@@ -12,16 +12,25 @@ public class ASTListAddStatement extends SimpleNode
 		super(p, id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void interpret()
 	{
 		String identifier = ((ASTId) jjtGetChild(0)).name;
-		ArrayList<Object> list = (ArrayList<Object>) ParfANode.variables.get(identifier);
-		for(int i = 1; i < jjtGetNumChildren(); i++)
+		try
 		{
-			jjtGetChild(i).interpret();
-			list.add(ParfANode.stack[ParfANode.p--]);
+			ArrayList<Object> list = (ArrayList<Object>) ParfANode.variables.get(identifier);
+			for(int i = 1; i < jjtGetNumChildren(); i++)
+			{
+				jjtGetChild(i).interpret();
+				list.add(ParfANode.stack[ParfANode.p--]);
+			}
+			ParfANode.variables.put(identifier, list);
 		}
-		ParfANode.variables.put(identifier, list);
+	    catch(ClassCastException e)
+	    {
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " is not a list.");
+	    	throw new IllegalStateException();
+	    }
 	}
 }

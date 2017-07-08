@@ -27,6 +27,9 @@ public class ASTVariableDeclareStatement extends SimpleNode
 		else if(type == ParfAConstants.LIST)
 			ParfANode.variables.put(name, new ArrayList<Object>());
 		else
+		{
+			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
 			throw new IllegalStateException();
+		}
 	}
 }

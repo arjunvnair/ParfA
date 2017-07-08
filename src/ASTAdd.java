@@ -12,6 +12,7 @@ public class ASTAdd extends SimpleNode
 		super(p, id);
     }
   
+	@SuppressWarnings("unchecked")
 	@Override
 	public void interpret()
 	{
@@ -33,6 +34,7 @@ public class ASTAdd extends SimpleNode
 	    }
 	    catch(ClassCastException e)
 	    {
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot add " + getName(ParfANode.stack[ParfANode.p + 1].getClass()) + " to " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".");
 	    	throw new IllegalStateException();
 	    }
   }

@@ -12,6 +12,8 @@ public class ASTNumberOf extends SimpleNode
 		super(p, id);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
 	public void interpret()
 	{
 		try
@@ -27,7 +29,8 @@ public class ASTNumberOf extends SimpleNode
 		}
 		catch(ClassCastException e)
 		{
-			throw new IllegalStateException();
-		}
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot call numberof on a " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".") ;
+	    	throw new IllegalStateException();
+	    }
 	}
 }

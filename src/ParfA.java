@@ -25,23 +25,30 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
                 System.err.println("File not found: " + args[0]);
                 return;
         }
-        catch (ParseException e)
-        {
-                System.err.println("Syntax error at " + "line:" + e.currentToken.endLine  + ", column:" + e.currentToken.endColumn + ".");
-            return;
-        }
         catch (TokenMgrError e)
         {
                 e.printStackTrace();
             return;
         }
         }
-        /**	* Compiles and runs a text file with ParfA code	* @param filename the full name of the text file	* @throws FileNotFoundException if the file cannot be located	* @throws ParseException if there is an error at compile time	* @throws TokenMgrError if there is an issue with the Token Manager	*/
-        public static void run(String filename) throws FileNotFoundException, ParseException, TokenMgrError
+        /**	* Compiles and runs a text file with ParfA code	* @param filename the full name of the text file	* @throws FileNotFoundException if the file cannot be located	* @throws TokenMgrError if there is an issue with the Token Manager	*/
+        public static void run(String filename) throws FileNotFoundException, TokenMgrError
         {
-                ParfA parser = new ParfA(new FileInputStream(filename));
-        parser.Program();
-        parser.jjtree.rootNode().interpret();
+                try
+                {
+                        ParfA parser = new ParfA(new FileInputStream(filename));
+                parser.Program();
+                parser.jjtree.rootNode().interpret();
+        }
+        catch (ParseException e)
+        {
+                System.err.println("Syntax error at " + "line:" + e.currentToken.endLine  + ", column:" + e.currentToken.endColumn + ".");
+            return;
+        }
+        catch(IllegalStateException e)
+        {
+                return;
+        }
         }
 
 /* Program */
@@ -1581,17 +1588,6 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     finally { jj_save(8, xla); }
   }
 
-  static private boolean jj_3R_47() {
-    if (jj_scan_token(NUMBER_EXPRESSION)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_13() {
-    if (jj_scan_token(EQUALS)) return true;
-    if (jj_3R_21()) return true;
-    return false;
-  }
-
   static private boolean jj_3R_39() {
     if (jj_scan_token(NOT)) return true;
     return false;
@@ -1920,6 +1916,17 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     jj_scanpos = xsp;
     if (jj_3R_54()) return true;
     }
+    return false;
+  }
+
+  static private boolean jj_3R_47() {
+    if (jj_scan_token(NUMBER_EXPRESSION)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_13() {
+    if (jj_scan_token(EQUALS)) return true;
+    if (jj_3R_21()) return true;
     return false;
   }
 

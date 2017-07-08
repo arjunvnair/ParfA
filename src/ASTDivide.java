@@ -17,10 +17,11 @@ public class ASTDivide extends SimpleNode
 	    jjtGetChild(1).interpret();
 	    try
 	    {
-	    	ParfANode.stack[--ParfANode.p] = new Double(((Double) ParfANode.stack[ParfANode.p]).intValue() / ((Double) ParfANode.stack[ParfANode.p + 1]).intValue());
+	    	ParfANode.stack[--ParfANode.p] = new Double(((Double) ParfANode.stack[ParfANode.p]).doubleValue() / ((Double) ParfANode.stack[ParfANode.p + 1]).intValue());
 	    }
 	    catch(ClassCastException e)
 	    {
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot divide " + getName(ParfANode.stack[ParfANode.p + 1].getClass()) + " with " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".");
 	    	throw new IllegalStateException();
 	    }
 	}

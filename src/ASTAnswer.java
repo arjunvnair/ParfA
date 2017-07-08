@@ -16,6 +16,9 @@ public class ASTAnswer extends SimpleNode
 		if(ParfANode.variables.get("answer") != null)
 			ParfANode.stack[++ParfANode.p] = ParfANode.variables.get("answer");
 		else
-			throw new IllegalStateException();
+		{
+	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", ask the user for input before trying to retrieve an answer.");
+	    	throw new IllegalStateException();
+	    }
 	}
 }
