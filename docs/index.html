@@ -1,12 +1,6 @@
-<div id="editor">some text</div>
+<div id="editor" style="height: 500px; width: 500px">some text</div>
 <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
+    editor.setReadOnly(false);
 </script>
-
-#editor 
-{
-    position: absolute;
-    width: 500px;
-    height: 400px;
-}
