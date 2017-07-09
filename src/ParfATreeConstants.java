@@ -35,9 +35,9 @@ public interface ParfATreeConstants
   public int JJTASKSTATEMENT = 31;
   public int JJTLISTADDSTATEMENT = 32;
   public int JJTLISTREMOVESTATEMENT = 33;
-  public int JJTVARIABLEDECLAREASSIGNSTATEMENT = 34;
-  public int JJTVARIABLEDECLARESTATEMENT = 35;
-  public int JJTVARIABLEASSIGNSTATEMENT = 36;
+  public int JJTVARIABLEDECLARESTATEMENT = 34;
+  public int JJTVARIABLEASSIGNSTATEMENT = 35;
+  public int JJTVARIABLEDECLAREASSIGNSTATEMENT = 36;
   public int JJTBLOCK = 37;
 
 
@@ -76,10 +76,10 @@ public interface ParfATreeConstants
     "AskStatement",
     "ListAddStatement",
     "ListRemoveStatement",
-    "VariableDeclareAssignStatement",
     "VariableDeclareStatement",
     "VariableAssignStatement",
+    "VariableDeclareAssignStatement",
     "Block",
   };
 }
-/* JavaCC - OriginalChecksum=61fa80cf982ce0be46923a0b7055f32b (do not edit this line) */
+/* JavaCC - OriginalChecksum=360c3ddd587f6d4aeaeba062b3dea798 (do not edit this line) */

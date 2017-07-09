@@ -1287,62 +1287,6 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     }
   }
 
-  static final public void VariableDeclareAssignStatement() throws ParseException {
- /*@bgen(jjtree) VariableDeclareAssignStatement */
-        ASTVariableDeclareAssignStatement jjtn000 = new ASTVariableDeclareAssignStatement(JJTVARIABLEDECLAREASSIGNSTATEMENT);
-        boolean jjtc000 = true;
-        jjtree.openNodeScope(jjtn000);
-        jjtn000.jjtSetFirstToken(getToken(1));Token t;
-    try {
-      jj_consume_token(CREATE);
-      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-      case NUMBER:
-        jj_consume_token(NUMBER);
-                             jjtn000.type = ParfAConstants.NUMBER;
-        break;
-      case LOGIC:
-        jj_consume_token(LOGIC);
-                                                                               jjtn000.type = ParfAConstants.LOGIC;
-        break;
-      case TEXT:
-        jj_consume_token(TEXT);
-                                                                                                                               jjtn000.type = ParfAConstants.TEXT;
-        break;
-      case LIST:
-        jj_consume_token(LIST);
-                                                                                                                                                                              jjtn000.type = ParfAConstants.LIST;
-        break;
-      default:
-        jj_la1[19] = jj_gen;
-        jj_consume_token(-1);
-        throw new ParseException();
-      }
-      t = jj_consume_token(IDENTIFIER);
-                                                                                                                                                                                                                                        jjtn000.name = t.image;
-      jj_consume_token(ASSIGN);
-      Expression();
-    } catch (Throwable jjte000) {
-           if (jjtc000) {
-             jjtree.clearNodeScope(jjtn000);
-             jjtc000 = false;
-           } else {
-             jjtree.popNode();
-           }
-           if (jjte000 instanceof RuntimeException) {
-             {if (true) throw (RuntimeException)jjte000;}
-           }
-           if (jjte000 instanceof ParseException) {
-             {if (true) throw (ParseException)jjte000;}
-           }
-           {if (true) throw (Error)jjte000;}
-    } finally {
-           if (jjtc000) {
-             jjtree.closeNodeScope(jjtn000, true);
-             jjtn000.jjtSetLastToken(getToken(0));
-           }
-    }
-  }
-
   static final public void VariableDeclareStatement() throws ParseException {
  /*@bgen(jjtree) VariableDeclareStatement */
         ASTVariableDeclareStatement jjtn000 = new ASTVariableDeclareStatement(JJTVARIABLEDECLARESTATEMENT);
@@ -1369,7 +1313,7 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
                                                                                                                                                                              jjtn000.type = ParfAConstants.LIST;
         break;
       default:
-        jj_la1[20] = jj_gen;
+        jj_la1[19] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
@@ -1394,6 +1338,62 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
   jjtn000.jjtSetFirstToken(getToken(1));
     try {
       Id();
+      jj_consume_token(ASSIGN);
+      Expression();
+    } catch (Throwable jjte000) {
+           if (jjtc000) {
+             jjtree.clearNodeScope(jjtn000);
+             jjtc000 = false;
+           } else {
+             jjtree.popNode();
+           }
+           if (jjte000 instanceof RuntimeException) {
+             {if (true) throw (RuntimeException)jjte000;}
+           }
+           if (jjte000 instanceof ParseException) {
+             {if (true) throw (ParseException)jjte000;}
+           }
+           {if (true) throw (Error)jjte000;}
+    } finally {
+           if (jjtc000) {
+             jjtree.closeNodeScope(jjtn000, true);
+             jjtn000.jjtSetLastToken(getToken(0));
+           }
+    }
+  }
+
+  static final public void VariableDeclareAssignStatement() throws ParseException {
+ /*@bgen(jjtree) VariableDeclareAssignStatement */
+        ASTVariableDeclareAssignStatement jjtn000 = new ASTVariableDeclareAssignStatement(JJTVARIABLEDECLAREASSIGNSTATEMENT);
+        boolean jjtc000 = true;
+        jjtree.openNodeScope(jjtn000);
+        jjtn000.jjtSetFirstToken(getToken(1));Token t;
+    try {
+      jj_consume_token(CREATE);
+      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+      case NUMBER:
+        jj_consume_token(NUMBER);
+                             jjtn000.type = ParfAConstants.NUMBER;
+        break;
+      case LOGIC:
+        jj_consume_token(LOGIC);
+                                                                               jjtn000.type = ParfAConstants.LOGIC;
+        break;
+      case TEXT:
+        jj_consume_token(TEXT);
+                                                                                                                               jjtn000.type = ParfAConstants.TEXT;
+        break;
+      case LIST:
+        jj_consume_token(LIST);
+                                                                                                                                                                              jjtn000.type = ParfAConstants.LIST;
+        break;
+      default:
+        jj_la1[20] = jj_gen;
+        jj_consume_token(-1);
+        throw new ParseException();
+      }
+      t = jj_consume_token(IDENTIFIER);
+                                                                                                                                                                                                                                        jjtn000.name = t.image;
       jj_consume_token(ASSIGN);
       Expression();
     } catch (Throwable jjte000) {
@@ -1470,7 +1470,7 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
   }
 
   static final public void Statement() throws ParseException {
-    if (jj_2_4(3)) {
+    if (jj_2_4(2147483647)) {
       VariableDeclareAssignStatement();
     } else if (jj_2_5(2)) {
       VariableAssignStatement();
@@ -1590,25 +1590,24 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
 
   static private boolean jj_3R_39() {
     if (jj_scan_token(NOT)) return true;
+    if (jj_3R_37()) return true;
     return false;
   }
 
   static private boolean jj_3R_18() {
-    if (jj_3R_26()) return true;
+    if (jj_3R_27()) return true;
     if (jj_scan_token(ADD)) return true;
     return false;
   }
 
-  static private boolean jj_3R_41() {
-    if (jj_3R_47()) return true;
+  static private boolean jj_3R_42() {
+    if (jj_3R_52()) return true;
     return false;
   }
 
   static private boolean jj_3R_40() {
     Token xsp;
     xsp = jj_scanpos;
-    if (jj_3R_41()) {
-    jj_scanpos = xsp;
     if (jj_3R_42()) {
     jj_scanpos = xsp;
     if (jj_3R_43()) {
@@ -1617,12 +1616,30 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     jj_scanpos = xsp;
     if (jj_3R_45()) {
     jj_scanpos = xsp;
-    if (jj_3R_46()) return true;
+    if (jj_3R_46()) {
+    jj_scanpos = xsp;
+    if (jj_3R_47()) return true;
     }
     }
     }
     }
     }
+    return false;
+  }
+
+  static private boolean jj_3R_25() {
+    if (jj_scan_token(LIST)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_67() {
+    if (jj_scan_token(MODULUS)) return true;
+    if (jj_3R_37()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_23() {
+    if (jj_scan_token(LOGIC)) return true;
     return false;
   }
 
@@ -1641,6 +1658,12 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     return false;
   }
 
+  static private boolean jj_3R_50() {
+    if (jj_scan_token(LESSTHANOREQUALTO)) return true;
+    if (jj_3R_32()) return true;
+    return false;
+  }
+
   static private boolean jj_3_3() {
     Token xsp;
     xsp = jj_scanpos;
@@ -1653,22 +1676,39 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
 
   static private boolean jj_3R_20() {
     if (jj_scan_token(ANNOUNCE)) return true;
+    if (jj_3R_26()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_48() {
+    if (jj_scan_token(LESSTHAN)) return true;
     if (jj_3R_32()) return true;
     return false;
   }
 
-  static private boolean jj_3R_30() {
-    if (jj_scan_token(LIST)) return true;
+  static private boolean jj_3R_41() {
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_48()) {
+    jj_scanpos = xsp;
+    if (jj_3R_49()) {
+    jj_scanpos = xsp;
+    if (jj_3R_50()) {
+    jj_scanpos = xsp;
+    if (jj_3R_51()) return true;
+    }
+    }
+    }
     return false;
   }
 
-  static private boolean jj_3R_35() {
+  static private boolean jj_3R_36() {
     if (jj_3R_37()) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_28() {
-    if (jj_scan_token(LOGIC)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_62()) { jj_scanpos = xsp; break; }
+    }
     return false;
   }
 
@@ -1678,35 +1718,58 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     return false;
   }
 
-  static private boolean jj_3R_33() {
-    if (jj_3R_35()) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_25() {
-    if (jj_scan_token(LIST)) return true;
+  static private boolean jj_3R_34() {
+    if (jj_3R_36()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_58()) { jj_scanpos = xsp; break; }
+    }
     return false;
   }
 
   static private boolean jj_3R_19() {
     if (jj_scan_token(WAIT)) return true;
     if (jj_scan_token(LPAR)) return true;
-    if (jj_3R_31()) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_23() {
-    if (jj_scan_token(LOGIC)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_46() {
-    if (jj_scan_token(LPAR)) return true;
+    if (jj_3R_32()) return true;
     return false;
   }
 
   static private boolean jj_3R_31() {
-    if (jj_3R_33()) return true;
+    if (jj_scan_token(LIST)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_29() {
+    if (jj_scan_token(LOGIC)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_69() {
+    if (jj_scan_token(CONTAINS)) return true;
+    if (jj_3R_26()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_68() {
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_69()) {
+    jj_scanpos = xsp;
+    if (jj_3R_70()) return true;
+    }
+    return false;
+  }
+
+  static private boolean jj_3R_47() {
+    if (jj_scan_token(LPAR)) return true;
+    if (jj_3R_26()) return true;
+    if (jj_scan_token(RPAR)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_32() {
+    if (jj_3R_34()) return true;
     return false;
   }
 
@@ -1716,33 +1779,61 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     return false;
   }
 
-  static private boolean jj_3R_51() {
-    if (jj_3R_26()) return true;
+  static private boolean jj_3R_56() {
+    if (jj_3R_27()) return true;
     return false;
   }
 
   static private boolean jj_3R_21() {
-    if (jj_3R_31()) return true;
+    if (jj_3R_32()) return true;
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_41()) jj_scanpos = xsp;
     return false;
   }
 
-  static private boolean jj_3R_45() {
-    if (jj_3R_52()) return true;
+  static private boolean jj_3R_46() {
+    if (jj_3R_57()) return true;
     return false;
   }
 
   static private boolean jj_3R_12() {
     if (jj_3R_21()) return true;
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3_3()) jj_scanpos = xsp;
+    return false;
+  }
+
+  static private boolean jj_3R_64() {
+    if (jj_scan_token(MINUS)) return true;
+    if (jj_3R_36()) return true;
     return false;
   }
 
   static private boolean jj_3R_11() {
     if (jj_3R_12()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_2()) { jj_scanpos = xsp; break; }
+    }
     return false;
   }
 
-  static private boolean jj_3R_36() {
+  static private boolean jj_3R_51() {
+    if (jj_scan_token(GREATERTHANOREQUALTO)) return true;
+    if (jj_3R_32()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_35() {
     if (jj_3R_11()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_1()) { jj_scanpos = xsp; break; }
+    }
     return false;
   }
 
@@ -1752,23 +1843,37 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     return false;
   }
 
-  static private boolean jj_3R_50() {
-    if (jj_3R_55()) return true;
+  static private boolean jj_3R_55() {
+    if (jj_3R_61()) return true;
     return false;
   }
 
-  static private boolean jj_3R_44() {
+  static private boolean jj_3R_66() {
+    if (jj_scan_token(DIVIDE)) return true;
+    if (jj_3R_37()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_45() {
     Token xsp;
     xsp = jj_scanpos;
-    if (jj_3R_50()) {
+    if (jj_3R_55()) {
     jj_scanpos = xsp;
-    if (jj_3R_51()) return true;
+    if (jj_3R_56()) return true;
     }
+    xsp = jj_scanpos;
+    if (jj_3R_68()) jj_scanpos = xsp;
     return false;
   }
 
-  static private boolean jj_3R_34() {
-    if (jj_3R_36()) return true;
+  static private boolean jj_3R_71() {
+    if (jj_scan_token(COMMA)) return true;
+    if (jj_3R_26()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_33() {
+    if (jj_3R_35()) return true;
     return false;
   }
 
@@ -1777,13 +1882,23 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     return false;
   }
 
-  static private boolean jj_3R_54() {
+  static private boolean jj_3_4() {
+    if (jj_3R_15()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_24() {
+    if (jj_scan_token(TEXT)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_60() {
     if (jj_scan_token(FALSE)) return true;
     return false;
   }
 
-  static private boolean jj_3R_32() {
-    if (jj_3R_34()) return true;
+  static private boolean jj_3R_26() {
+    if (jj_3R_33()) return true;
     return false;
   }
 
@@ -1792,18 +1907,24 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     return false;
   }
 
-  static private boolean jj_3R_52() {
+  static private boolean jj_3R_57() {
     if (jj_scan_token(ANSWER)) return true;
     return false;
   }
 
-  static private boolean jj_3R_29() {
-    if (jj_scan_token(TEXT)) return true;
+  static private boolean jj_3R_22() {
+    if (jj_scan_token(NUMBER)) return true;
     return false;
   }
 
   static private boolean jj_3_7() {
     if (jj_3R_18()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_49() {
+    if (jj_scan_token(GREATERTHAN)) return true;
+    if (jj_3R_32()) return true;
     return false;
   }
 
@@ -1817,72 +1938,18 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     return false;
   }
 
-  static private boolean jj_3R_43() {
-    if (jj_3R_49()) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_26() {
-    if (jj_scan_token(IDENTIFIER)) return true;
-    return false;
-  }
-
-  static private boolean jj_3_4() {
-    if (jj_3R_15()) return true;
+  static private boolean jj_3R_44() {
+    if (jj_3R_54()) return true;
     return false;
   }
 
   static private boolean jj_3R_27() {
-    if (jj_scan_token(NUMBER)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_24() {
-    if (jj_scan_token(TEXT)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_16() {
-    if (jj_3R_26()) return true;
-    if (jj_scan_token(ASSIGN)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_55() {
-    if (jj_scan_token(LBRAC)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_22() {
-    if (jj_scan_token(NUMBER)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_17() {
-    if (jj_scan_token(CREATE)) return true;
-    Token xsp;
-    xsp = jj_scanpos;
-    if (jj_3R_27()) {
-    jj_scanpos = xsp;
-    if (jj_3R_28()) {
-    jj_scanpos = xsp;
-    if (jj_3R_29()) {
-    jj_scanpos = xsp;
-    if (jj_3R_30()) return true;
-    }
-    }
-    }
     if (jj_scan_token(IDENTIFIER)) return true;
     return false;
   }
 
-  static private boolean jj_3R_49() {
-    if (jj_scan_token(TEXT_EXPRESSION)) return true;
-    return false;
-  }
-
-  static private boolean jj_3R_42() {
-    if (jj_3R_48()) return true;
+  static private boolean jj_3R_30() {
+    if (jj_scan_token(TEXT)) return true;
     return false;
   }
 
@@ -1901,26 +1968,120 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     }
     }
     if (jj_scan_token(IDENTIFIER)) return true;
+    if (jj_scan_token(ASSIGN)) return true;
+    if (jj_3R_26()) return true;
     return false;
   }
 
-  static private boolean jj_3R_53() {
+  static private boolean jj_3R_61() {
+    if (jj_scan_token(LBRAC)) return true;
+    if (jj_3R_26()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_71()) { jj_scanpos = xsp; break; }
+    }
+    if (jj_scan_token(RBRAC)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_28() {
+    if (jj_scan_token(NUMBER)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_70() {
+    if (jj_scan_token(NUMBEROF)) return true;
+    if (jj_3R_26()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_16() {
+    if (jj_3R_27()) return true;
+    if (jj_scan_token(ASSIGN)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_54() {
+    if (jj_scan_token(TEXT_EXPRESSION)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_43() {
+    if (jj_3R_53()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_17() {
+    if (jj_scan_token(CREATE)) return true;
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_28()) {
+    jj_scanpos = xsp;
+    if (jj_3R_29()) {
+    jj_scanpos = xsp;
+    if (jj_3R_30()) {
+    jj_scanpos = xsp;
+    if (jj_3R_31()) return true;
+    }
+    }
+    }
+    if (jj_scan_token(IDENTIFIER)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_63() {
+    if (jj_scan_token(PLUS)) return true;
+    if (jj_3R_36()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_59() {
     if (jj_scan_token(TRUE)) return true;
     return false;
   }
 
-  static private boolean jj_3R_48() {
+  static private boolean jj_3R_58() {
     Token xsp;
     xsp = jj_scanpos;
-    if (jj_3R_53()) {
+    if (jj_3R_63()) {
     jj_scanpos = xsp;
-    if (jj_3R_54()) return true;
+    if (jj_3R_64()) return true;
     }
     return false;
   }
 
-  static private boolean jj_3R_47() {
+  static private boolean jj_3R_53() {
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_59()) {
+    jj_scanpos = xsp;
+    if (jj_3R_60()) return true;
+    }
+    return false;
+  }
+
+  static private boolean jj_3R_52() {
     if (jj_scan_token(NUMBER_EXPRESSION)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_65() {
+    if (jj_scan_token(MULTIPLY)) return true;
+    if (jj_3R_37()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_62() {
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_65()) {
+    jj_scanpos = xsp;
+    if (jj_3R_66()) {
+    jj_scanpos = xsp;
+    if (jj_3R_67()) return true;
+    }
+    }
     return false;
   }
 
