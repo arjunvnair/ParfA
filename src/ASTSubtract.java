@@ -16,6 +16,15 @@ public class ASTSubtract extends SimpleNode
 	    jjtGetChild(1).interpret();
 	    try
 	    {
+	    	if(ParfANode.stack[ParfANode.p] instanceof String)
+	    		try
+	    		{
+	    			ParfANode.stack[ParfANode.p] = Double.parseDouble((String) ParfANode.stack[ParfANode.p]);
+	    		}
+	    		catch(NumberFormatException e)
+	    		{
+	    			ParfANode.stack[ParfANode.p] = 0;
+	    		}
 	    	ParfANode.stack[--ParfANode.p] = new Double(((Double) ParfANode.stack[ParfANode.p]).doubleValue() - ((Double) ParfANode.stack[ParfANode.p + 1]).doubleValue());
 	    }
 	    catch(ClassCastException e)
