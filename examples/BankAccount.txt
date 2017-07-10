@@ -1,0 +1,21 @@
+ask "What is your initial deposit?"
+create number balance store answer
+ask "What do you want to do, withdraw or deposit? (say done to end)"
+repeatUntil(answer equals "done")
+{
+	if(answer equals "withdraw")
+	{
+		ask "How much money do you want to withdraw?"
+		balance store balance - answer
+	}
+	else if(answer equals "deposit")
+	{
+		ask "How much money do you want to deposit?"
+		balance store balance + answer
+	}
+	else
+	{
+		announce "Choose withdraw, deposit, or done."
+	}
+	ask "What do you want to do, withdraw or deposit? (say done to end)"
+}

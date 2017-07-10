@@ -2,4 +2,4 @@ ask "What is the length?"
 create number l store answer
 ask "What is the width?"
 create number w store answer
-announce l * w
+announce "The area is " + l * w + "."
