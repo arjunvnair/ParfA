@@ -1,5 +1,5 @@
 ask "What is the length?"
-create number length store answer
+create number l store answer
 ask "What is the width?"
-create number width store answer
-announce length * width
+create number w store answer
+announce l * w
