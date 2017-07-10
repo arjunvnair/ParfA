@@ -91,25 +91,27 @@ public interface ParfAConstants {
   /** RegularExpression Id. */
   int CONTAINS = 46;
   /** RegularExpression Id. */
-  int ASSIGN = 47;
+  int LENGTHOF = 47;
   /** RegularExpression Id. */
-  int ADD = 48;
+  int ASSIGN = 48;
   /** RegularExpression Id. */
-  int REMOVE = 49;
+  int ADD = 49;
   /** RegularExpression Id. */
-  int NUMBER_EXPRESSION = 50;
+  int REMOVE = 50;
   /** RegularExpression Id. */
-  int TRUE = 51;
+  int NUMBER_EXPRESSION = 51;
   /** RegularExpression Id. */
-  int FALSE = 52;
+  int TRUE = 52;
   /** RegularExpression Id. */
-  int TEXT_EXPRESSION = 53;
+  int FALSE = 53;
   /** RegularExpression Id. */
-  int IDENTIFIER = 54;
+  int TEXT_EXPRESSION = 54;
   /** RegularExpression Id. */
-  int SINGLE_LINE_COMMENT = 56;
+  int IDENTIFIER = 55;
   /** RegularExpression Id. */
-  int MULTI_LINE_COMMENT = 57;
+  int SINGLE_LINE_COMMENT = 57;
+  /** RegularExpression Id. */
+  int MULTI_LINE_COMMENT = 58;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -165,6 +167,7 @@ public interface ParfAConstants {
     "<NOT>",
     "<NUMBEROF>",
     "\"contains\"",
+    "<LENGTHOF>",
     "<ASSIGN>",
     "\"add\"",
     "\"remove\"",
@@ -176,7 +179,7 @@ public interface ParfAConstants {
     "\"/*\"",
     "<SINGLE_LINE_COMMENT>",
     "\"*/\"",
-    "<token of kind 58>",
+    "<token of kind 59>",
   };
 
 }

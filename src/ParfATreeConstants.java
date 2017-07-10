@@ -17,28 +17,29 @@ public interface ParfATreeConstants
   public int JJTDIVIDE = 13;
   public int JJTMODULUS = 14;
   public int JJTNOT = 15;
-  public int JJTNUMBEROF = 16;
+  public int JJTLENGTH = 16;
   public int JJTCONTAINS = 17;
-  public int JJTNUMBERLITERAL = 18;
-  public int JJTLOGICLITERAL = 19;
-  public int JJTTEXTLITERAL = 20;
-  public int JJTLISTLITERAL = 21;
-  public int JJTID = 22;
-  public int JJTANSWER = 23;
-  public int JJTIFSTATEMENT = 24;
-  public int JJTLOOPSTATEMENT = 25;
-  public int JJTREPEATUNTILSTATEMENT = 26;
-  public int JJTFOREVERSTATEMENT = 27;
-  public int JJTWAITSTATEMENT = 28;
-  public int JJTWAITUNTILSTATEMENT = 29;
-  public int JJTANNOUNCESTATEMENT = 30;
-  public int JJTASKSTATEMENT = 31;
-  public int JJTLISTADDSTATEMENT = 32;
-  public int JJTLISTREMOVESTATEMENT = 33;
-  public int JJTVARIABLEDECLARESTATEMENT = 34;
-  public int JJTVARIABLEASSIGNSTATEMENT = 35;
-  public int JJTVARIABLEDECLAREASSIGNSTATEMENT = 36;
-  public int JJTBLOCK = 37;
+  public int JJTNUMBEROF = 18;
+  public int JJTNUMBERLITERAL = 19;
+  public int JJTLOGICLITERAL = 20;
+  public int JJTTEXTLITERAL = 21;
+  public int JJTLISTLITERAL = 22;
+  public int JJTID = 23;
+  public int JJTANSWER = 24;
+  public int JJTIFSTATEMENT = 25;
+  public int JJTLOOPSTATEMENT = 26;
+  public int JJTREPEATUNTILSTATEMENT = 27;
+  public int JJTFOREVERSTATEMENT = 28;
+  public int JJTWAITSTATEMENT = 29;
+  public int JJTWAITUNTILSTATEMENT = 30;
+  public int JJTANNOUNCESTATEMENT = 31;
+  public int JJTASKSTATEMENT = 32;
+  public int JJTLISTADDSTATEMENT = 33;
+  public int JJTLISTREMOVESTATEMENT = 34;
+  public int JJTVARIABLEDECLARESTATEMENT = 35;
+  public int JJTVARIABLEASSIGNSTATEMENT = 36;
+  public int JJTVARIABLEDECLAREASSIGNSTATEMENT = 37;
+  public int JJTBLOCK = 38;
 
 
   public String[] jjtNodeName = {
@@ -58,8 +59,9 @@ public interface ParfATreeConstants
     "Divide",
     "Modulus",
     "Not",
-    "NumberOf",
+    "Length",
     "Contains",
+    "NumberOf",
     "NumberLiteral",
     "LogicLiteral",
     "TextLiteral",
@@ -82,4 +84,4 @@ public interface ParfATreeConstants
     "Block",
   };
 }
-/* JavaCC - OriginalChecksum=360c3ddd587f6d4aeaeba062b3dea798 (do not edit this line) */
+/* JavaCC - OriginalChecksum=6faff1bae397674fb35278ddb7797be2 (do not edit this line) */
