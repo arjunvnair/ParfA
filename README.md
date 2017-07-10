@@ -37,4 +37,4 @@ Read the home page of our wiki [here](https://github.com/arjunvnair/ParfA/wiki).
 
 ## How to Run ParfA On Your Computer
 
-Download the latest release of the ParfA compiler [here](https://github.com/arjunvnair/ParfA/releases). Create a .txt file with your ParfA code in a text editor such as NotePad, and in the cmd line of your computer, type in ````java -jar ParfA. jar [yourfilename].txt````.
+Download the latest release of the ParfA compiler [here](https://github.com/arjunvnair/ParfA/releases). Create a .txt file with your ParfA code in a text editor such as NotePad, and in the cmd line of your computer, type in ````java -jar ParfA. jar [yourfilename]````.
