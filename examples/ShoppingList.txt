@@ -1,0 +1,16 @@
+create list shoppingList
+ask "Add an item to the shopping list (enter done to finish):"
+repeatUntil(answer equals "done")
+{
+	shoppingList add answer
+	ask "Add an item to the shopping list (enter done to finish):"
+}
+announce "Your shopping list is " + shoppingList + "."
+repeatUntil(lengthof shoppingList equals 0)
+{
+	ask "What are you buying?"
+	if(shoppingList contains answer)
+	{
+		shoppingList remove answer
+	}
+}

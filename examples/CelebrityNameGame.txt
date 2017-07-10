@@ -1,0 +1,6 @@
+ask "Name a celebrity!"
+forever
+{
+	ask "Name a celebrity whose first name starts with the first letter of " + answer + "'s last name!"
+}
+	
