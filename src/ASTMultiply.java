@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the * operator.
+ * @author Arjun Nair
+ */
 public class ASTMultiply extends SimpleNode 
 {
 	public ASTMultiply(int id) 

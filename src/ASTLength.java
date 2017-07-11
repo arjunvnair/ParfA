@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the lengthof operator.
+ * @author Arjun Nair
+ */
 public class ASTLength extends SimpleNode 
 {
 	public ASTLength(int id) 

@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the equals operator.
+ * @author Arjun Nair
+ */
 public class ASTEquals extends SimpleNode 
 {
 	public ASTEquals(int id) 

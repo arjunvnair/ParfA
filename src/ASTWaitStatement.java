@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for wait statement.
+ * @author Arjun Nair
+ */
 public class ASTWaitStatement extends SimpleNode 
 {
 	public ASTWaitStatement(int id) 

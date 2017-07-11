@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the or operator.
+ * @author Arjun Nair
+ */
 public class ASTOr extends SimpleNode 
 {
 	public ASTOr(int id) 

@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the not operator.
+ * @author Arjun Nair
+ */
 public class ASTNot extends SimpleNode 
 {
 	public ASTNot(int id) 

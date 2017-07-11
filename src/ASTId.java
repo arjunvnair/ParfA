@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the identifier field.
+ * @author Arjun Nair
+ */
 public class ASTId extends SimpleNode 
 {
 	String name;

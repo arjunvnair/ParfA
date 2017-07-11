@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.io.IOException;
 
+/**
+ * Tree node for the ask statement.
+ * @author Arjun Nair
+ */
 public class ASTAskStatement extends SimpleNode 
 {
 	String name;

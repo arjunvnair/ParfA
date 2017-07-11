@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the logic literal.
+ * @author Arjun Nair
+ */
 public class ASTLogicLiteral extends SimpleNode 
 {
 	Boolean val;

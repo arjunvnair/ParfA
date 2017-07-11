@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the repeatUntil statement.
+ * @author Arjun Nair
+ */
 public class ASTRepeatUntilStatement extends SimpleNode 
 {
 	public ASTRepeatUntilStatement(int id) 

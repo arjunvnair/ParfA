@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the && operator.
+ * @author Arjun Nair
+ */
 public class ASTAnd extends SimpleNode 
 {
 	public ASTAnd(int id) 
@@ -10,6 +18,7 @@ public class ASTAnd extends SimpleNode
 		super(p, id);
 	}
 
+	@Override
 	public void interpret()
 	{
 		try

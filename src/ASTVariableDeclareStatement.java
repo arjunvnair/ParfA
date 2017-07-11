@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the variable declare statement.
+ * @author Arjun Nair
+ */
 public class ASTVariableDeclareStatement extends SimpleNode 
 {
 	int type;

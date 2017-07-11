@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the text literal.
+ * @author Arjun Nair
+ */
 public class ASTTextLiteral extends SimpleNode 
 {
 	String val;
@@ -12,6 +20,7 @@ public class ASTTextLiteral extends SimpleNode
 		super(p, id);
 	}
 
+	@Override
 	public void interpret()
 	{
 		ParfANode.stack[++ParfANode.p] = new String(val);

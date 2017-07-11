@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the forever statement.
+ * @author Arjun Nair
+ */
 public class ASTForeverStatement extends SimpleNode 
 {
 	public ASTForeverStatement(int id) 

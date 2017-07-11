@@ -1,5 +1,12 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
 import java.util.ArrayList;
 
+/**
+ * Tree node for the + operator.
+ * @author Arjun Nair
+ */
 public class ASTAdd extends SimpleNode 
 {
 	public ASTAdd(int id) 

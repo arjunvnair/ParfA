@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the add statement.
+ * @author Arjun Nair
+ */
 public class ASTListAddStatement extends SimpleNode 
 {
 	public ASTListAddStatement(int id) 

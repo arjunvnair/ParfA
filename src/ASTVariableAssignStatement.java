@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the variable assign statement.
+ * @author Arjun Nair
+ */
 public class ASTVariableAssignStatement extends SimpleNode 
 {
 	public ASTVariableAssignStatement(int id) 

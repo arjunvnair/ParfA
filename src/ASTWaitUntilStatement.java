@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for waitUntil statement.
+ * @author Arjun Nair
+ */
 public class ASTWaitUntilStatement extends SimpleNode 
 {
 	public ASTWaitUntilStatement(int id) 

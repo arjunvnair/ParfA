@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the answer field.
+ * @author Arjun Nair
+ */
 public class ASTAnswer extends SimpleNode 
 {
 	public ASTAnswer(int id) 

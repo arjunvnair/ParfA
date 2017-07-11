@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the numberof operator.
+ * @author Arjun Nair
+ */
 public class ASTNumberOf extends SimpleNode 
 {
 	public ASTNumberOf(int id) 

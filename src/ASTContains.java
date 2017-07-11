@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the contains operator.
+ * @author Arjun Nair
+ */
 public class ASTContains extends SimpleNode 
 {
 	public ASTContains(int id) 

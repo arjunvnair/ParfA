@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.io.IOException;
 
+/**
+ * Tree node for the announce statement.
+ * @author Arjun Nair
+ */
 public class ASTAnnounceStatement extends SimpleNode 
 {
 	String name;

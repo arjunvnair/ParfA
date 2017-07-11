@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the - operator.
+ * @author Arjun Nair
+ */
 public class ASTSubtract extends SimpleNode 
 {
 	public ASTSubtract(int id) 

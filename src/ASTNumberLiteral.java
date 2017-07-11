@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the number literal.
+ * @author Arjun Nair
+ */
 public class ASTNumberLiteral extends SimpleNode 
 {
 	Double val;

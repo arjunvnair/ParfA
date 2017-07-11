@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the list literal.
+ * @author Arjun Nair
+ */
 public class ASTListLiteral extends SimpleNode 
 {
 	public ASTListLiteral(int id) 

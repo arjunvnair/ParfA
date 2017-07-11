@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the loop statement.
+ * @author Arjun Nair
+ */
 public class ASTLoopStatement extends SimpleNode 
 {
 	public ASTLoopStatement(int id) 

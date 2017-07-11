@@ -1,5 +1,13 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Tree node for the remove statement.
+ * @author Arjun Nair
+ */
 public class ASTListRemoveStatement extends SimpleNode 
 {
 	public ASTListRemoveStatement(int id) 

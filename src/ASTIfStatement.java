@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2017 Arjun Nair
+ */
+
+/**
+ * Tree node for the if statement.
+ * @author Arjun Nair
+ */
 public class ASTIfStatement extends SimpleNode 
 {
 	int elseIfCount;
