@@ -32,10 +32,6 @@ create number width store answer
 announce "The area is " + length * width + "."
 ````
 
-## How to Learn ParfA
+## Download and Learn ParfA Today
 
-Read the home page of our wiki [here](https://github.com/arjunvnair/ParfA/Tutorial).
-
-## How to Run ParfA On Your Computer
-
-Download the latest release of the ParfA compiler, ParfA.bat and ParfA.jar, [here](https://github.com/arjunvnair/ParfA/releases). Create a .txt file with your ParfA code in a text editor such as NotePad, copy its file path, double click ParfA.bat, and input the file path to run the code.
+Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/Tutorial) to learn more. Good luck, and if you encounter any problems along the way, don't hesitate to report them on the [Issues Tracker](https://github.com/arjunvnair/ParfA/issues).
