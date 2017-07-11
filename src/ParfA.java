@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.util.jar.JarOutputStream;
 import java.util.jar.Manifest;
@@ -21,16 +22,21 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
         String answer = "y";
         while(answer.equalsIgnoreCase("y"))
         {
-                System.out.print("Enter the file path to your ParfA code: ");
+                try
+                {
+                        Files.createDirectory(Paths.get(System.getProperty("user.home") + "/Documents/ParfA"));
+                        }
+                        catch(IOException e) {}
+                System.out.print("Enter the file name of the txt file (must be in the Documents/ParfA folder): ");
                 String filename = s.nextLine();
-                while(!(new File(filename)).exists())
+                while(!(new File(System.getProperty("user.home") + "/Documents/ParfA/" + filename)).exists())
                 {
                         System.out.print("File not recognized, double check your file path and enter again: ");
                         filename = s.nextLine();
                 }
                 try
                 {
-                        run(filename);
+                        run(System.getProperty("user.home") + "/Documents/ParfA/" + filename);
                 }
                 catch (TokenMgrError e)
                 {
@@ -1652,18 +1658,6 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     finally { jj_save(8, xla); }
   }
 
-  private boolean jj_3R_19() {
-    if (jj_scan_token(WAIT)) return true;
-    if (jj_scan_token(LPAR)) return true;
-    if (jj_3R_32()) return true;
-    return false;
-  }
-
-  private boolean jj_3R_31() {
-    if (jj_scan_token(LIST)) return true;
-    return false;
-  }
-
   private boolean jj_3R_69() {
     if (jj_3R_55()) return true;
     return false;
@@ -2184,6 +2178,18 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
 
   private boolean jj_3R_70() {
     if (jj_3R_62()) return true;
+    return false;
+  }
+
+  private boolean jj_3R_19() {
+    if (jj_scan_token(WAIT)) return true;
+    if (jj_scan_token(LPAR)) return true;
+    if (jj_3R_32()) return true;
+    return false;
+  }
+
+  private boolean jj_3R_31() {
+    if (jj_scan_token(LIST)) return true;
     return false;
   }
 
