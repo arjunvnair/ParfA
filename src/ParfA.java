@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.util.jar.JarOutputStream;
@@ -13,46 +14,55 @@ import java.util.jar.Attributes;
 import java.util.Collection;
 import java.util.zip.ZipEntry;
 
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+import consoleio.C;
+
 import org.apache.commons.io.FileUtils;
 
 public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants {/*@bgen(jjtree)*/
   protected JJTParfAState jjtree = new JJTParfAState();public static void main(String args[]) throws Exception
     {
-        Scanner s = new Scanner(System.in);
         String answer = "y";
         while(answer.equalsIgnoreCase("y"))
         {
-                try
-                {
-                        Files.createDirectory(Paths.get(System.getProperty("user.home") + "/Documents/ParfA"));
+                        try
+                        {
+                                Files.createDirectory(Paths.get(System.getProperty("user.home") + "/Documents/ParfA"));
                         }
-                        catch(IOException e) {}
-                System.out.print("Enter the file name of the txt file (must be in the Documents/ParfA folder): ");
-                String filename = s.nextLine();
-                while(!(new File(System.getProperty("user.home") + "/Documents/ParfA/" + filename)).exists())
-                {
-                        System.out.print("File not recognized, double check your file path and enter again: ");
-                        filename = s.nextLine();
-                }
+                        catch (IOException e) {}
+                        String filename = File.separator + "txt";
+                        JFileChooser fc = new JFileChooser(new File(filename));
+                        fc.setFileFilter(new FileNameExtensionFilter("ParfA Code Files", "txt", "text"));
+                        fc.showOpenDialog(C.io.frame);
+                        fc.setCurrentDirectory(new File(System.getProperty("user.home") + "/Documents/ParfA"));
                 try
                 {
-                        run(System.getProperty("user.home") + "/Documents/ParfA/" + filename);
+                        run(new FileInputStream(fc.getSelectedFile().getAbsolutePath()));
                 }
-                catch (TokenMgrError e)
+                catch(FileNotFoundException e)
                 {
-                        e.printStackTrace();
-                return;
+                        C.io.print("File not recognized. Run the program again.");
+                        C.io.nextLine();
+                        return;
                 }
-                System.out.print("Program finished. Run another program (y/n)? ");
-                answer = s.nextLine();
+                catch(NullPointerException e)
+                {
+                        C.io.print("No file chosen. Run the program again.");
+                        C.io.nextLine();
+                        return;
+                }
+                C.io.print("\u005cnProgram finished. Run another program (y/n)? ");
+                answer = C.io.nextLine();
          }
         }
-        /**	* Compiles and runs a text file with ParfA code	* @param filename the full name of the text file	* @throws FileNotFoundException if the file cannot be located	*/
-        public static void run(String filename) throws FileNotFoundException
+        /**	* Compiles and runs a text file with ParfA code	* @param stream the input stream with the code	*/
+        public static void run(InputStream stream)
         {
                 try
                 {
-                        ParfA parser = new ParfA(new FileInputStream(filename));
+                        ParfA parser = new ParfA(stream);
                 parser.Program();
                 parser.jjtree.rootNode().interpret();
         }
@@ -1658,11 +1668,6 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
     finally { jj_save(8, xla); }
   }
 
-  private boolean jj_3R_69() {
-    if (jj_3R_55()) return true;
-    return false;
-  }
-
   private boolean jj_3R_65() {
     if (jj_scan_token(MINUS)) return true;
     if (jj_3R_36()) return true;
@@ -2190,6 +2195,11 @@ public class ParfA/*@bgen(jjtree)*/implements ParfATreeConstants, ParfAConstants
 
   private boolean jj_3R_31() {
     if (jj_scan_token(LIST)) return true;
+    return false;
+  }
+
+  private boolean jj_3R_69() {
+    if (jj_3R_55()) return true;
     return false;
   }
 

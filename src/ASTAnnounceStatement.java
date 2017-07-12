@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Arjun Nair
  */
 
-import java.io.IOException;
+import consoleio.C;
 
 /**
  * Tree node for the announce statement.
@@ -29,16 +29,12 @@ public class ASTAnnounceStatement extends SimpleNode
 		try
 		{
 			jjtGetChild(0).interpret();
-			ParfANode.printer.write(ParfANode.stack[ParfANode.p].toString() + "\n");
-		    ParfANode.printer.flush();
-		}
-		catch (IOException e) 
-		{
-			throw new IllegalStateException(e);
+			C.io.print(ParfANode.stack[ParfANode.p--].toString() + "\n");
 		}
 		catch(NullPointerException e)
 		{
-			throw new IllegalStateException(e);
+			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
+			throw new IllegalStateException();
 		}
 	}
 }

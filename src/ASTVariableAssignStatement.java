@@ -26,7 +26,16 @@ public class ASTVariableAssignStatement extends SimpleNode
     	jjtGetChild(1).interpret();
 		Object val = ParfANode.stack[ParfANode.p--];
 		String identifier = ((ASTId) jjtGetChild(0)).name;
-		Class<?> c = ParfANode.variables.get(identifier).getClass();
+		Class<?> c;
+		try
+		{
+			c = ParfANode.variables.get(identifier).getClass();
+		}
+		catch(NullPointerException e)
+		{
+			System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " was never declared.");
+			throw new IllegalStateException();
+		}
 		if(c.equals(Double.class))
 			if(val.getClass().equals(String.class))
 				try

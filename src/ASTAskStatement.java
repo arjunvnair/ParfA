@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Arjun Nair
  */
 
-import java.io.IOException;
+import consoleio.C;
 
 /**
  * Tree node for the ask statement.
@@ -26,18 +26,8 @@ public class ASTAskStatement extends SimpleNode
 	@Override
 	public void interpret()
 	{
-		char[] input = new char[64];
 		jjtGetChild(0).interpret();
-	    try
-	    {
-	    	ParfANode.printer.write(ParfANode.stack[ParfANode.p].toString() + " ");
-		   	ParfANode.printer.flush();
-	        ParfANode.reader.read(input);
-	    }
-	    catch (IOException e) 
-	  	{
-	    	throw new IllegalStateException(e);
-	  	}
-        ParfANode.variables.put("answer", (new String(input)).trim());
+	    C.io.print(ParfANode.stack[ParfANode.p].toString() + " ");
+	    ParfANode.variables.put("answer", (C.io.nextLine()).trim());
 	}
 }
