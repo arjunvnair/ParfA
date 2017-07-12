@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>ParfA Online Editor</title>
+    <script src="//www.java.com/js/deployJava.js"></script>
     <style>
         #editor { 
                 position: absolute;
@@ -27,5 +28,12 @@ announce "The area is " + l * w + "."
         //editor.getSession().setMode("ace/mode/javascript");
     </script>
     <input id="runButton" type="button" value="Run" onclick="doFunction();" />
+    <OBJECT classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+    width="200" height="200" align="baseline" >
+    <PARAM NAME="archive" VALUE = "ParfApplet.jar">
+    <PARAM NAME="code" VALUE="ParfApplet.class">
+    <PARAM NAME="type" VALUE="application/x-java-applet;jpi-version=1.8">
+    <PARAM NAME="scriptable" VALUE="true">
+</OBJECT>
 </body>
 </html>
