@@ -34,4 +34,4 @@ announce "The area is " + length * width + "."
 
 ## Download and Learn ParfA Today
 
-Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/Tutorial) to learn more. Good luck, and if you encounter any problems along the way, don't hesitate to report them on the [Issues Tracker](https://github.com/arjunvnair/ParfA/wiki/Tutorial).
+Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/wiki/Tutorial) to learn more. Good luck, and if you encounter any problems along the way, don't hesitate to report them on the [Issues Tracker](https://github.com/arjunvnair/ParfA/wiki/Tutorial).
