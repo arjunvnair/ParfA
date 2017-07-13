@@ -4,6 +4,8 @@
 
 import java.util.ArrayList;
 
+import consoleio.C;
+
 /**
  * Tree node for the variable assign statement.
  * @author Arjun Nair
@@ -33,7 +35,7 @@ public class ASTVariableAssignStatement extends SimpleNode
 		}
 		catch(NullPointerException e)
 		{
-			System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " was never declared.");
+			C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " was never declared.");
 			throw new IllegalStateException();
 		}
 		if(c.equals(Double.class))
@@ -48,7 +50,7 @@ public class ASTVariableAssignStatement extends SimpleNode
 				}
 			else if(!val.getClass().equals(Double.class))
 			{
-				System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " is a " + getName(c) + " and cannot store a " + getName(val.getClass()) + ".");
+				C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " is a " + getName(c) + " and cannot store a " + getName(val.getClass()) + ".");
 				throw new IllegalStateException();
 			}
 		else if(c.equals(String.class))
@@ -56,12 +58,12 @@ public class ASTVariableAssignStatement extends SimpleNode
 		else if(c.equals(Boolean.class) | c.equals(ArrayList.class))
 			if(!c.equals(val.getClass()))
 			{
-				System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " is a " + getName(c) + " and cannot store a " + getName(val.getClass()) + ".");
+				C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " is a " + getName(c) + " and cannot store a " + getName(val.getClass()) + ".");
 				throw new IllegalStateException();
 			}
 		else
 		{
-			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
+			C.io.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
 			throw new IllegalStateException();
 		}
     	ParfANode.variables.put(identifier, val);

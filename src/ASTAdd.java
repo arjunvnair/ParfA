@@ -3,6 +3,8 @@
  */
 import java.util.ArrayList;
 
+import consoleio.C;
+
 /**
  * Tree node for the + operator.
  * @author Arjun Nair
@@ -41,7 +43,7 @@ public class ASTAdd extends SimpleNode
 	    }
 	    catch(ClassCastException e)
 	    {
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot add " + getName(ParfANode.stack[ParfANode.p + 1].getClass()) + " to " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".");
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot add " + getName(ParfANode.stack[ParfANode.p + 1].getClass()) + " to " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".");
 	    	throw new IllegalStateException();
 	    }
   }

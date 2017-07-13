@@ -4,6 +4,8 @@
 
 import java.util.ArrayList;
 
+import consoleio.C;
+
 /**
  * Tree node for the remove statement.
  * @author Arjun Nair
@@ -37,7 +39,7 @@ public class ASTListRemoveStatement extends SimpleNode
 		}
 	    catch(ClassCastException e)
 	    {
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " is not a list.");
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + identifier + " is not a list.");
 	    	throw new IllegalStateException();
 	    }
 	}

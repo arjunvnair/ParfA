@@ -4,6 +4,8 @@
 
 import java.util.ArrayList;
 
+import consoleio.C;
+
 /**
  * Tree node for the variable declare and assign statement.
  * @author Arjun Nair
@@ -53,12 +55,12 @@ public class ASTVariableDeclareAssignStatement extends SimpleNode
 			c = ArrayList.class;
 		else
 		{
-			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
+			C.io.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
 			throw new IllegalStateException();
 		}
 		if(!(val.getClass().equals(c)))
 		{
-			System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + name + " is a " + getName(c) + " and cannot store a " + getName(val.getClass()) + ".");
+			C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", " + name + " is a " + getName(c) + " and cannot store a " + getName(val.getClass()) + ".");
 			throw new IllegalStateException();
 		}
     	ParfANode.variables.put(name, val);

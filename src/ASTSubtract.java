@@ -1,3 +1,5 @@
+import consoleio.C;
+
 /**
  * Copyright (c) 2017 Arjun Nair
  */
@@ -37,7 +39,7 @@ public class ASTSubtract extends SimpleNode
 	    }
 	    catch(ClassCastException e)
 	    {
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot subtract " + getName(ParfANode.stack[ParfANode.p + 1].getClass()) + " from " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".");
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot subtract " + getName(ParfANode.stack[ParfANode.p + 1].getClass()) + " from " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".");
 	    	throw new IllegalStateException();
 	    }
 	}

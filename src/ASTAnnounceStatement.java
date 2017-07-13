@@ -10,10 +10,7 @@ import consoleio.C;
  */
 public class ASTAnnounceStatement extends SimpleNode 
 {
-	String name;
-	String val;
-	
-	public ASTAnnounceStatement(int id) 
+	public ASTAnnounceStatement(int id) 	
 	{
 		super(id);
 	}
@@ -33,7 +30,7 @@ public class ASTAnnounceStatement extends SimpleNode
 		}
 		catch(NullPointerException e)
 		{
-			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
+			C.io.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
 			throw new IllegalStateException();
 		}
 	}

@@ -1,3 +1,5 @@
+import consoleio.C;
+
 /**
  * Copyright (c) 2017 Arjun Nair
  */
@@ -23,11 +25,11 @@ public class ASTNot extends SimpleNode
 		jjtGetChild(0).interpret();
 	    try
 	    {
-	    	ParfANode.stack[ParfANode.p] = new Boolean(!((Boolean) ParfANode.stack[ParfANode.p]).booleanValue());
+	    	ParfANode.stack[ParfANode.p] = !((Boolean) ParfANode.stack[ParfANode.p]);
 	    }
 	    catch(ClassCastException e)
 	    {
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", can only use the not operator on a logic expression.");
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", can only use the not operator on a logic expression.");
 	    	throw new IllegalStateException();
 	    }
 	}

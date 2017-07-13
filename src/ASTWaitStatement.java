@@ -1,3 +1,5 @@
+import consoleio.C;
+
 /**
  * Copyright (c) 2017 Arjun Nair
  */
@@ -27,12 +29,12 @@ public class ASTWaitStatement extends SimpleNode
 		}
     	catch(ClassCastException e)
     	{
-    		System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", wait time must be a numeric expression.");
+    		C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", wait time must be a numeric expression.");
     		throw new IllegalStateException();
     	}
 		catch(InterruptedException e)
 		{
-			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
+			C.io.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
     		throw new IllegalStateException();
 		}
 	}

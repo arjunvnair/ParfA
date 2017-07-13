@@ -1,3 +1,5 @@
+import consoleio.C;
+
 /**
  * Copyright (c) 2017 Arjun Nair
  */
@@ -47,7 +49,7 @@ public class ASTIfStatement extends SimpleNode
 		}
 	    catch(ClassCastException e)
 	    {
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", if conditions must be logic expressions.");
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", if conditions must be logic expressions.");
 	    	throw new IllegalStateException();
 	    }
 	}

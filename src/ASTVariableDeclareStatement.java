@@ -4,6 +4,8 @@
 
 import java.util.ArrayList;
 
+import consoleio.C;
+
 /**
  * Tree node for the variable declare statement.
  * @author Arjun Nair
@@ -36,7 +38,7 @@ public class ASTVariableDeclareStatement extends SimpleNode
 			ParfANode.variables.put(name, new ArrayList<Object>());
 		else
 		{
-			System.err.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
+			C.io.println("A fatal exception occurred when processing line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", try running the program again.");
 			throw new IllegalStateException();
 		}
 	}

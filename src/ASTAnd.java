@@ -1,3 +1,5 @@
+import consoleio.C;
+
 /**
  * Copyright (c) 2017 Arjun Nair
  */
@@ -34,7 +36,7 @@ public class ASTAnd extends SimpleNode
 		}
 		catch(ClassCastException e)
 		{
-			System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot use and operator with non-logic values.");
+			C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot use and operator with non-logic values.");
 	    	throw new IllegalStateException();
 		}
 	}

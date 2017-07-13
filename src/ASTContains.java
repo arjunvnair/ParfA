@@ -4,6 +4,8 @@
 
 import java.util.ArrayList;
 
+import consoleio.C;
+
 /**
  * Tree node for the contains operator.
  * @author Arjun Nair
@@ -33,7 +35,7 @@ public class ASTContains extends SimpleNode
 		}
 		catch(ClassCastException e)
 		{
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot call contains on a " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".") ;
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot call contains on a " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".") ;
 	    	throw new IllegalStateException();
 	    }
 	}

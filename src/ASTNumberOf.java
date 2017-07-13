@@ -4,6 +4,8 @@
 
 import java.util.ArrayList;
 
+import consoleio.C;
+
 /**
  * Tree node for the numberof operator.
  * @author Arjun Nair
@@ -37,7 +39,7 @@ public class ASTNumberOf extends SimpleNode
 		}
 		catch(ClassCastException e)
 		{
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot call numberof on a " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".") ;
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", cannot call numberof on a " + getName(ParfANode.stack[ParfANode.p].getClass()) + ".") ;
 	    	throw new IllegalStateException();
 	    }
 	}

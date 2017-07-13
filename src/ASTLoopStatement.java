@@ -1,3 +1,5 @@
+import consoleio.C;
+
 /**
  * Copyright (c) 2017 Arjun Nair
  */
@@ -29,7 +31,7 @@ public class ASTLoopStatement extends SimpleNode
 		}
 		catch(ClassCastException e)
 		{
-		    System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", loop time must be a numeric expression.");
+		    C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", loop time must be a numeric expression.");
 		    throw new IllegalStateException();
 		}
 	}

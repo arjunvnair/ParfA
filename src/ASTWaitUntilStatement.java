@@ -1,3 +1,5 @@
+import consoleio.C;
+
 /**
  * Copyright (c) 2017 Arjun Nair
  */
@@ -31,7 +33,7 @@ public class ASTWaitUntilStatement extends SimpleNode
 		}
 	    catch(ClassCastException e)
 	    {
-	    	System.err.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", wait condition must be a logic expression.");
+	    	C.io.println("Runtime error at line: " + jjtGetLastToken().endLine + ", column: " + jjtGetLastToken().endColumn + ", wait condition must be a logic expression.");
 	    	throw new IllegalStateException();
 	    }
 	}

@@ -10,9 +10,6 @@ import consoleio.C;
  */
 public class ASTAskStatement extends SimpleNode 
 {
-	String name;
-	String val;
-	
 	public ASTAskStatement(int id) 
 	{
 		super(id);
@@ -27,7 +24,7 @@ public class ASTAskStatement extends SimpleNode
 	public void interpret()
 	{
 		jjtGetChild(0).interpret();
-	    C.io.print(ParfANode.stack[ParfANode.p].toString() + " ");
+	    C.io.print(ParfANode.stack[ParfANode.p--].toString() + " ");
 	    ParfANode.variables.put("answer", (C.io.nextLine()).trim());
 	}
 }
