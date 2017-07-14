@@ -1,6 +1,6 @@
 ![ParfA logo](http://i.imgur.com/yPF8UfJ.png)
 
-Relying on a basic I/O scheme and lexicon that can be understood by the average English speaker, ParfA's goal is to be the programming language that anyone can learn.
+Relying on a basic input and output scheme and grammar that can be understood by the average English speaker, ParfA is the programming language that anyone can learn.
 
 ## Easier Than Java
 
