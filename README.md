@@ -1,8 +1,8 @@
 ![ParfA logo](http://i.imgur.com/yPF8UfJ.png)
 
-Programming is becoming an increasingly valuable skill in the Digital Age. However, when learning a programming language for the first time, many beginners struggle to simultaneously learn the fundamental logic behind programming along with the complicated syntax that comes with these languages. These languages are very powerful in the right hands, but they can be daunting and even discouraging for beginners.
+Programming is becoming an increasingly valuable skill in the Digital Age. However, when learning a programming language for the first time, many beginners struggle to simultaneously learn the fundamental logic behind programming along with the complicated syntax that comes with these languages. These languages are very powerful in the right hands, but they can be daunting for beginners.
 
-ParfA is a text-based programming language made specifically for beginners; although it doesn't have all the functionality of a real programming language, it can still be used to make a variety of programs, from text-based games to quizzes, in a matter of minutes. 
+ParfA (pronounced like parfait) is a text-based programming language made specifically for beginners; although it doesn't have all the functionality of a real programming language, it can still be used to make a variety of programs, from text-based games to quizzes, in a matter of minutes. 
 
 ## Why Learn ParfA?
 
@@ -28,7 +28,7 @@ public class CalculateArea
     }
 }
 ````
-Daunting, right? Let's take a look at this same program in ParfA:
+Scary, right? Let's take a look at this same program in ParfA:
 ````
 ask "What is the length?"
 create number length store answer
@@ -36,7 +36,12 @@ ask "What is the width?"
 create number width store answer
 announce "The area is " + length * width + "."
 ````
-This code is a lot more easy to read. Of course, there's a lot more to ParfA than simple calculations - there's loops, 
+This code is a lot easier to read. Of course, there's a lot more to ParfA than performing simple calculations - ParfA has loops, logic operations, and most other features taught in a first year computer science course. In this way, beginners can learn how these features work on a fundamental level before learning more complicated languages like Java. 
+
 ## Download and Learn ParfA Today
 
 Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/wiki/Tutorial) to get started. Good luck, and if you encounter any problems along the way, don't hesitate to report them on the [Issues Tracker](https://github.com/arjunvnair/ParfA/wiki/Tutorial).
+
+## The Future of ParfA
+
+We're working on a feature that will allow programmers to export their ParfA projects as .jar files, allowing them to easily send their creations to others. This will open up ParfA to a variety of applications beyond its use as a learning tool; for example, a student tasked with an open-ended project for one of their classes might choose to create an interactive ParfA program and turn that in to their teacher.
