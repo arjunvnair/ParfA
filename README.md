@@ -1,8 +1,8 @@
 ![ParfA logo](http://i.imgur.com/yPF8UfJ.png)
 
-Relying on a basic input and output scheme and grammar that can be understood by the average English speaker, ParfA is the programming language that anyone can learn.
+ParfA is the programming language that anyone can learn!
 
-## Easier Than Java
+## Why Learn ParfA
 
 Take a look at this area calculation program in Java:
 ````
