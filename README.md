@@ -44,4 +44,4 @@ Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/wi
 
 ## The Future of ParfA
 
-We're working on a feature that will allow programmers to export their ParfA projects as .jar files, allowing them to easily send their creations to others. This will open up ParfA to a variety of applications beyond its use as a learning tool; for example, a student tasked with an open-ended project for one of their classes might choose to create an interactive ParfA program and turn that in to their teacher.
+We're working on a feature that will allow programmers to export their ParfA projects as runnable files, allowing them to send their creations to others. This will open up ParfA to a variety of applications beyond its use as a learning tool; for example, a student tasked with an open-ended project in one of their classes might design an interactive ParfA program for their teacher.
