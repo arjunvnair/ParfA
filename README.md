@@ -36,7 +36,7 @@ ask "What is the width?"
 create number width store answer
 announce "The area is " + length * width + "."
 ````
-This code is a lot easier to read. Of course, there's a lot more to ParfA than performing simple calculations; ParfA has loops, logic operations, and most other features taught in a first year computer science course. In this manner, beginners can learn how these features work on a fundamental level before learning more robust languages like Java. 
+This code is a lot easier to read! Of course, there's a lot more to ParfA than performing simple calculations; ParfA has loops, logic operations, and most other features taught in a first year computer science course. In this manner, beginners can learn how these features work on a fundamental level before learning more robust languages like Java. 
 
 ## Download and Learn ParfA Today
 
