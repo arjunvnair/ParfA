@@ -40,7 +40,7 @@ This code is a lot easier to read! Of course, there's a lot more to ParfA than p
 
 ## Download and Learn ParfA Today
 
-Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/wiki/Tutorial) to get started. Good luck, and if you encounter any problems along the way, don't hesitate to report them on the [Issues Tracker](https://github.com/arjunvnair/ParfA/wiki/Tutorial).
+Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/wiki/Tutorial) to get started. Good luck, and if you encounter any problems along the way, don't hesitate to report them on the [Issues Tracker](https://github.com/arjunvnair/ParfA/issues).
 
 ## The Future of ParfA
 
