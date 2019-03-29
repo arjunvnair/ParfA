@@ -41,7 +41,3 @@ This code is a lot easier to read! Of course, there's a lot more to ParfA than p
 ## Download and Learn ParfA Today
 
 Read the tutorial page of our wiki [here](https://github.com/arjunvnair/ParfA/wiki/Tutorial) to get started. Good luck, and if you encounter any problems along the way, don't hesitate to report them on the [Issues Tracker](https://github.com/arjunvnair/ParfA/issues).
-
-## The Future of ParfA
-
-We're working on a feature that will allow users to export their ParfA projects as runnable files, allowing them to send their creations to others. This will open up ParfA to a variety of applications beyond its original intended use as a learning tool, whether it's for a student at school who wants to design an interactive program for an open-ended project or for a person with little programming experience looking to make their own text-based game.
