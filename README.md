@@ -1,6 +1,6 @@
 ![ParfA logo](http://i.imgur.com/yPF8UfJ.png)
 
-More people than ever before are trying to learn how to program. However, when learning a programming language for the first time, many beginners struggle to simultaneously learn the fundamental logic behind programming alongside the complicated syntax and structures that accompany these powerful languages.
+## What is ParfA?
 
 ParfA (pronounced "parfait") is a simple text-based programming language made specifically for beginners. Although it doesn't have all the functionality of a real programming language, it can still be used to make a variety of programs, from text-based games to quizzes and calculators, in a matter of minutes. 
 
