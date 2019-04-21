@@ -6,10 +6,9 @@ ParfA (pronounced "parfait") is a simple text-based programming language made sp
 
 ## What is ParfA useful for?
 
-ParfA helps beginners write simple program with as little code as possible. Let's consider a program that prompts the user for the length and width of a rectangle. 
+ParfA helps beginners write simple programs with as little code as possible. Let's consider a program that prompts the user for the length and width of a rectangle. 
 
 In Java, it would look something like this:
-
 ````
 package com.github;
 
