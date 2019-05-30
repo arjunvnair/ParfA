@@ -2,7 +2,7 @@
 
 ## What is ParfA?
 
-ParfA (pronounced "parfait") is a simple text-based programming language. Although it doesn't have all the functionality of a real programming language, it can still be used to make a variety of programs, from text-based games to quizzes and calculators, in a matter of minutes. 
+ParfA is a simple text-based programming language. Although it doesn't have all the functionality of a real programming language, it can still be used to make a variety of programs, from text-based games to quizzes and calculators, in a matter of minutes. 
 
 ## Download and Learn ParfA Today
 
